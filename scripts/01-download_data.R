@@ -12,10 +12,10 @@
 library(haven)
 library(tidyverse)
 
-#### Download data ####
-data1 <- read_dta("raw/anes_timeseries_2016.dta")
-view(data1)
-#### Save data ####
-write_csv(data1, "inputs/data/raw__election_data.csv") 
+#### Open data ####
+base_data <- read_dta("Desktop/112081-V1 2/baseline_anonymous.dta")
 
+#### Save data ####
+
+write_csv(base_data, "inputs/data/base_line_data.csv") 
          
