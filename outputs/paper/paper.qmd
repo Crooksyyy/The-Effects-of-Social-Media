@@ -19,11 +19,15 @@ bibliography: references.bib
 #| message: false
 
 library(tidyverse)
-library(palmerpenguins)
+
+cleaned_data <- read_csv(here::here("outputs/Data/analysis_data.csv"))
+
 ```
 
 
 # Introduction
+
+The introduction is self-contained and tells a reader everything they need to know including: 1) broader context to motivate; 2) some detail about what the paper is about; 3) a clear gap that needs to be filled; 4) what was done; 5) what was found; 6) why it is important; 7) the structure of the paper. A reader should be able to read only the introduction and know what was done, why, and what was found. Likely 3 or 4 paragraphs, or 10 per cent of total.
 
 You can and should cross-reference sections and sub-sections. 
 
@@ -33,111 +37,41 @@ The remainder of this paper is structured as follows. @sec-data....
 
 # Data {#sec-data}
 
-Some of our data is of penguins (@fig-bills), from @palmerpenguins.
-
+The data used in this paper is from (cite og paper). The data used in the paper is extremely compplicated as it combines numerous data sets to complete their analysis. In this paper, we wanted to simplify the data 
 ```{r}
-#| label: fig-bills
-#| fig-cap: Bills of penguins
-#| echo: false
 
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = "none") +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
+ggplot(cleaned_data, aes(x = reorder(hhld_inc, -table(hhld_inc)[hhld_inc]), fill = hhld_inc)) +
+  geom_bar() +
+  labs(title = "Distribution of Household Income",
+       x = "Household Income",
+       y = "Count") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
 ```
-
-Talk more about it.
-
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
-
 ```{r}
-#| label: fig-planes
-#| fig-cap: Relationship between wing length and width
-#| echo: false
-#| warning: false
-#| message: false
-
-analysis_data <- read_csv(here::here("outputs/data/analysis_data.csv"))
-
-analysis_data |> 
-  ggplot(aes(x = width, y = length)) +
-  geom_point(alpha = 0.8) +
-  theme_minimal() +
-  labs(x = "Wing width (mm)",
-       y = "Wing length (mm)")
+ggplot(cleaned_data, aes(x = hhld_inc, fill = hhld_inc)) +
+  geom_bar() +
+  labs(title = "Distribution of Household Income",
+       x = "Household Income",
+       y = "Count") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
-
-Talk way more about it. 
-
-
-
-# Model
-
-The goal of our modelling strategy is twofold. Firstly,...
-
-Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
-
-## Model set-up
-
-Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
-
-\begin{align} 
-y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
-\mu_i &= \alpha + \beta_i + \gamma_i\\
-\alpha &\sim \mbox{Normal}(0, 2.5) \\
-\beta &\sim \mbox{Normal}(0, 2.5) \\
-\gamma &\sim \mbox{Normal}(0, 2.5) \\
-\sigma &\sim \mbox{Exponential}(1)
-\end{align}
-
-We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
-
-
-### Model justification
-
-We expect a positive relationship between the size of the wings and time spent aloft. In particular...
-
-We can use maths by including latex between dollar signs, for instance $\theta$.
-
-
-# Results
-
-Our results are summarized in @tbl-modelresults.
-
 ```{r}
-#| echo: false
-#| eval: true
-#| warning: false
-#| message: false
-
-library(rstanarm)
-
-first_model <-
-  readRDS(file = here::here("outputs/models/first_model.rds"))
+ggplot(cleaned_data, aes(x = factor(hhld_inc, levels = unique(hhld_inc)), fill = hhld_inc)) +
+  geom_bar() +
+  labs(title = "Distribution of Household Income",
+       x = "Household Income",
+       y = "Count") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
 ```
-
 ```{r}
-#| echo: false
-#| eval: true
-#| label: tbl-modelresults
-#| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
-#| warning: false
-
-modelsummary::modelsummary(
-  list(
-    "First model" = first_model
-  ),
-  statistic = "mad",
-  fmt = 2
-)
+ggplot(cleaned_data, aes(x = factor(hhld_inc, levels = unique(cleaned_data$hhld_inc)), fill = hhld_inc)) +
+  geom_bar() +
+  labs(title = "Distribution of Household Income",
+       x = "Household Income",
+       y = "Count") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
-
-
-
-
 # Discussion
 
 ## First discussion point {#sec-first-point}
