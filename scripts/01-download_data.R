@@ -1,26 +1,21 @@
 #### Preamble ####
-# Purpose: Downloads and saves the data from [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Saves the Data into Repo as CSV 
+# Author: Gavin Crooks and Samarth Rajani
+# Date: Feb 12, 2024
+# Contact: gavin.crooks@mail.utoronto.ca or samarth.rajani@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: N/A
+
 
 
 #### Workspace setup ####
-library(opendatatoronto)
+library(haven)
 library(tidyverse)
-# [...UPDATE THIS...]
 
 #### Download data ####
-# [...ADD CODE HERE TO DOWNLOAD...]
-
-
-
+data1 <- read_dta("raw/anes_timeseries_2016.dta")
+view(data1)
 #### Save data ####
-# [...UPDATE THIS...]
-# change the_raw_data to whatever name you assigned when you downloaded it.
-write_csv(the_raw_data, "inputs/data/raw_data.csv") 
+write_csv(data1, "inputs/data/raw__election_data.csv") 
 
          
