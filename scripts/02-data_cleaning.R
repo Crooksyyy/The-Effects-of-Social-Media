@@ -15,6 +15,8 @@ View(raw_data)
 cleaned_data <- select(raw_data, hhld_inc, race, follow_politics)
 cleaned_data
 
+cleaned_data <- cleaned_data |> 
+  drop_na()
 
 
 view(cleaned_data)
