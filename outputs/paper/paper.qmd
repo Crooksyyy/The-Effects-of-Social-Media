@@ -1,6 +1,5 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
+title: ""
 author: 
   - First author
   - Another author
@@ -10,7 +9,6 @@ date-format: long
 abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
 format: pdf
 number-sections: true
-bibliography: references.bib
 ---
 
 ```{r}
@@ -19,7 +17,8 @@ bibliography: references.bib
 #| message: false
 
 library(tidyverse)
-
+library(here)
+library(knitr)
 cleaned_data <- read_csv(here::here("outputs/Data/analysis_data.csv"))
 
 ```
@@ -29,49 +28,48 @@ cleaned_data <- read_csv(here::here("outputs/Data/analysis_data.csv"))
 
 The introduction is self-contained and tells a reader everything they need to know including: 1) broader context to motivate; 2) some detail about what the paper is about; 3) a clear gap that needs to be filled; 4) what was done; 5) what was found; 6) why it is important; 7) the structure of the paper. A reader should be able to read only the introduction and know what was done, why, and what was found. Likely 3 or 4 paragraphs, or 10 per cent of total.
 
-You can and should cross-reference sections and sub-sections. 
-
-The remainder of this paper is structured as follows. @sec-data....
-
-
 
 # Data {#sec-data}
+## Data Introduction {#sec-dataintro}
+The data used in this paper is from (cite og paper). The data used in the paper is extremely complicated as it combines numerous data sets to complete their analysis. In this paper, we wanted to simplify the data. To simply the original papers data we focused on one of their eleven data sets. The most comprehensive data set was their baseline data. This data was collected through a facebook ad. The respondents answered a number of questions including questions about income, ethnicity, family, political beliefs and political following. The data was cleaned to focus on respondents income, race and how closely they follow politics. This provided a data set that could answer a number of questions. To first understand the possible research questions the data it must to be visualized as it has nearly 6000 entries. 
 
-The data used in this paper is from (cite og paper). The data used in the paper is extremely compplicated as it combines numerous data sets to complete their analysis. In this paper, we wanted to simplify the data 
+## Income Data {#sec-income_data}
+The first visualization of the data is in @figure1. This table illustrates that the least number of households make greater than 100,000 USD, below 20,000USD or preferred not to answer. This closely resembles the expected distribution of USA household income. As expected in any income distribution the majority of responses fall within the average income ranges of the USA, between 20,000USD and 100,000USD
 ```{r}
-
+#| label: fig-figure1
+#| fig-cap: "Distribution of Income in Responses"
+#| warning: false
+#| message: false
+#| echo: false
 ggplot(cleaned_data, aes(x = reorder(hhld_inc, -table(hhld_inc)[hhld_inc]), fill = hhld_inc)) +
   geom_bar() +
-  labs(title = "Distribution of Household Income",
-       x = "Household Income",
-       y = "Count") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  labs(x = "Household Income",
+       y = "Number of Respondents") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
 
 ```
+## Ethnicity Data {#sec-race_data}
+describe table and its implications and relevence
 ```{r}
-ggplot(cleaned_data, aes(x = hhld_inc, fill = hhld_inc)) +
-  geom_bar() +
-  labs(title = "Distribution of Household Income",
-       x = "Household Income",
-       y = "Count") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+#| label: tbl-race_dist
+#| tbl-cap: "Percentage of each Ethnicity Within the Data"
+#| warning: false
+#| message: false
+#| echo: false
+proportion_table <- cleaned_data %>%
+  group_by(race) %>%
+  summarise((proportion = n() / nrow(cleaned_data))*100) 
+kable(proportion_table)
+
 ```
-```{r}
-ggplot(cleaned_data, aes(x = factor(hhld_inc, levels = unique(hhld_inc)), fill = hhld_inc)) +
-  geom_bar() +
-  labs(title = "Distribution of Household Income",
-       x = "Household Income",
-       y = "Count") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
-```
-```{r}
-ggplot(cleaned_data, aes(x = factor(hhld_inc, levels = unique(cleaned_data$hhld_inc)), fill = hhld_inc)) +
-  geom_bar() +
-  labs(title = "Distribution of Household Income",
-       x = "Household Income",
-       y = "Count") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
-```
+
+## Politics Data {#sec-pol_data}
+
+
+# Model
+
+simple regression of income and politics data controlling for race 
+
 # Discussion
 
 ## First discussion point {#sec-first-point}
@@ -96,54 +94,6 @@ Weaknesses and next steps should also be included.
 # Additional data details
 
 # Model details {#sec-model-details}
-
-## Posterior predictive check
-
-In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. This shows...
-
-In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
-
-```{r}
-#| eval: true
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-ppcheckandposteriorvsprior
-#| layout-ncol: 2
-#| fig-cap: "Examining how the model fits, and is affected by, the data"
-#| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
-
-pp_check(first_model) +
-  theme_classic() +
-  theme(legend.position = "bottom")
-
-posterior_vs_prior(first_model) +
-  theme_minimal() +
-  scale_color_brewer(palette = "Set1") +
-  theme(legend.position = "bottom") +
-  coord_flip()
-```
-
-## Diagnostics
-
-@fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
-
-@fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
-
-```{r}
-#| echo: false
-#| eval: true
-#| message: false
-#| warning: false
-#| label: fig-stanareyouokay
-#| fig-cap: "Checking the convergence of the MCMC algorithm"
-#| fig-subcap: ["Trace plot", "Rhat plot"]
-#| layout-ncol: 2
-
-plot(first_model, "trace")
-
-plot(first_model, "rhat")
-```
 
 
 
