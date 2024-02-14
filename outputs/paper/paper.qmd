@@ -1,14 +1,18 @@
 ---
 title: ""
 author: 
-  - First author
-  - Another author
-thanks: "Code and data are available at: LINK."
+  - Gavin Crooks
+  - Samarth Rajani
+thanks: "Code and data are available at: LINK.https://github.com/Crooksyyy/The-Effects-of-Social-Media"
 date: today
 date-format: long
 abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
 format: pdf
 number-sections: true
+toc: true
+bibliography: references.bib 
+nocite: |
+  @*
 ---
 
 ```{r}
@@ -31,13 +35,13 @@ The introduction is self-contained and tells a reader everything they need to kn
 
 # Data {#sec-data}
 ## Data Introduction {#sec-dataintro}
-The data used in this paper is from (cite og paper). The data used in the paper is extremely complicated as it combines numerous data sets to complete their analysis. In this paper, we wanted to simplify the data. To simply the original papers data we focused on one of their eleven data sets. The most comprehensive data set was their baseline data. This data was collected through a facebook ad. The respondents answered a number of questions including questions about income, ethnicity, family, political beliefs and political following. The data was cleaned to focus on respondents income, race and how closely they follow politics. This provided a data set that could answer a number of questions. To first understand the possible research questions the data it must to be visualized as it has nearly 6000 entries. 
+The data used in this paper is from (cite og paper). The data used in the paper is extremely complicated as it combines numerous data sets to complete their analysis. In this paper, we wanted to simplify the data to determine if their paper had underlying biases within the data. To do this we focused on one of their eleven data sets, baseline dataset as it was the most comprehensive. This data was collected through a facebook ad. The respondents answered a number of questions including questions about income, ethnicity, family, political beliefs and political following. THis is a very useful data set outside the scope of the original paper as it can be analyzed to answer a number of questions. The data set was cleaned to focus on respondents income, race and how closely they follow politics. This provided a data set of approximately 6000 complete responses after removing unfinished responses. This was a substantial decrease from the orignal 24000 responses in the data. 
 
 ## Income Data {#sec-income_data}
-The first visualization of the data is in @figure1. This table illustrates that the least number of households make greater than 100,000 USD, below 20,000USD or preferred not to answer. This closely resembles the expected distribution of USA household income. As expected in any income distribution the majority of responses fall within the average income ranges of the USA, between 20,000USD and 100,000USD
+The variable within the data was the income variable. The questionnaire included a categorical value for the the household income of respondents. The data can be visualized in @figure1. This graph illustrates that the least number of households make greater than 100,000 USD, below 20,000USD or preferred not to answer. This graph also shows what the categorical option were for the respondents to the questionnaire. @figure1 closely resembles the expected distribution of USA household income. As expected in any income distribution the majority of responses fall within the average income ranges of the USA, between 20,000USD and 100,000USD. These factors indicate that the data set has an accurate respresentation of household income. 
 ```{r}
 #| label: fig-figure1
-#| fig-cap: "Distribution of Income in Responses"
+#| fig-cap: "Distribution of Income from Responses in a facebook ad"
 #| warning: false
 #| message: false
 #| echo: false
@@ -49,23 +53,44 @@ ggplot(cleaned_data, aes(x = reorder(hhld_inc, -table(hhld_inc)[hhld_inc]), fill
 
 ```
 ## Ethnicity Data {#sec-race_data}
-describe table and its implications and relevence
-```{r}
+The second question of the data that we have included in our analysis is the ethnicity of the respondents. This again is a categorical variable, that the individual self identifies their own ethnicity. The response options included Asian or Pacific Islander, White / Caucasian, Hispanic, Black or African American and other. @race_dist shows the percentage of respondents in each  with the overwhelming majority of responses being Caucasian at nearly 70%. This is actually less than the most recent estimates by the United States government which estimate over 75% of the population is Caucasian (cite us gov). The data also has an over representation of Asian and Native Americans. This results in an under representation of Hispanic and African American populations. 
+
+
+https://www.census.gov/quickfacts/fact/table/US/PST045222
+
+
+```{r} 
 #| label: tbl-race_dist
-#| tbl-cap: "Percentage of each Ethnicity Within the Data"
+#| tbl-cap: "Percentage of each Ethnicity from Responses in a facebook ad"
 #| warning: false
 #| message: false
 #| echo: false
 proportion_table <- cleaned_data %>%
   group_by(race) %>%
   summarise((proportion = n() / nrow(cleaned_data))*100) 
-kable(proportion_table)
-
+kable(proportion_table,
+      col.names = c("Ethnicity", "Percentage of Responses")
+)
 ```
 
 ## Politics Data {#sec-pol_data}
 
+The third variable in the data that is included in our analysis is a variable of respondents self identifying how closely they follow politics. This is another categorical variable measured as Not at all closely, Somewhat closely, Rather closely and  Very closely. This variable faces many problems as this categorical scale is not consistent across respondents. To be specific we mean someone who identifies as someone who does follows Not at all closely can be following politics more than someone who identifies as Somewhat closely. This is a measurement issue within to the questions asked in the survey and all self identifying variables in general. 
+```{r}
+#| label: fig-figure2
+#| fig-cap: "How Closely People Follow Politics from Responses in a facebook ad"
+#| warning: false
+#| message: false
+#| echo: false
 
+ggplot(cleaned_data, aes(x = "", fill = follow_politics)) +
+  geom_bar() +
+  coord_polar("y") +
+  labs(fill = "Legend") +
+  theme(axis.title = element_blank())
+
+
+```
 # Model
 
 simple regression of income and politics data controlling for race 
