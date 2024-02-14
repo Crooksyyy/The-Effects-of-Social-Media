@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Paper 2"
 author: 
   - Gavin Crooks
   - Samarth Rajani
@@ -38,18 +38,20 @@ The introduction is self-contained and tells a reader everything they need to kn
 The data used in this paper is from (cite og paper). The data used in the paper is extremely complicated as it combines numerous data sets to complete their analysis. In this paper, we wanted to simplify the data to determine if their paper had underlying biases within the data. To do this we focused on one of their eleven data sets, baseline dataset as it was the most comprehensive. This data was collected through a facebook ad. The respondents answered a number of questions including questions about income, ethnicity, family, political beliefs and political following. THis is a very useful data set outside the scope of the original paper as it can be analyzed to answer a number of questions. The data set was cleaned to focus on respondents income, race and how closely they follow politics. This provided a data set of approximately 6000 complete responses after removing unfinished responses. This was a substantial decrease from the orignal 24000 responses in the data. 
 
 ## Income Data {#sec-income_data}
-The variable within the data was the income variable. The questionnaire included a categorical value for the the household income of respondents. The data can be visualized in @figure1. This graph illustrates that the least number of households make greater than 100,000 USD, below 20,000USD or preferred not to answer. This graph also shows what the categorical option were for the respondents to the questionnaire. @figure1 closely resembles the expected distribution of USA household income. As expected in any income distribution the majority of responses fall within the average income ranges of the USA, between 20,000USD and 100,000USD. These factors indicate that the data set has an accurate respresentation of household income. 
+The variable within the data was the income variable. The questionnaire included a categorical value for the the household income of respondents. The data can be visualized in @figure1. This graph illustrates that the least number of households make greater than 100,000 USD, below 20,000USD or preferred not to answer. This graph also shows what the categorical option were for the respondents to the questionnaire. @figure1 closely resembles the expected distribution of USA household income. As expected in any income distribution the majority of responses fall within the average income ranges of the USA, between 20,000USD and 100,000USD. These factors indicate that the data set has an accurate representation of household income. 
 ```{r}
 #| label: fig-figure1
 #| fig-cap: "Distribution of Income from Responses in a facebook ad"
 #| warning: false
 #| message: false
 #| echo: false
+
 ggplot(cleaned_data, aes(x = reorder(hhld_inc, -table(hhld_inc)[hhld_inc]), fill = hhld_inc)) +
   geom_bar() +
   labs(x = "Household Income",
        y = "Number of Respondents") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  guides(fill = FALSE) # Code from Stack overflow 
 
 ```
 ## Ethnicity Data {#sec-race_data}
@@ -75,7 +77,7 @@ kable(proportion_table,
 
 ## Politics Data {#sec-pol_data}
 
-The third variable in the data that is included in our analysis is a variable of respondents self identifying how closely they follow politics. This is another categorical variable measured as Not at all closely, Somewhat closely, Rather closely and  Very closely. This variable faces many problems as this categorical scale is not consistent across respondents. To be specific we mean someone who identifies as someone who does follows Not at all closely can be following politics more than someone who identifies as Somewhat closely. This is a measurement issue within to the questions asked in the survey and all self identifying variables in general. 
+The third variable in the data that is included in our analysis is a variable of respondents self identifying how closely they follow politics. This is another categorical variable measured as Not at all closely, Somewhat closely, Rather closely and  Very closely. This variable faces many problems as this categorical scale is not consistent across respondents. To be specific we mean someone who identifies as someone who does follows Not at all closely can be following politics more than someone who identifies as Somewhat closely. This is a measurement issue within to the questions asked in the survey and all self identifying variables in general. @figure2 shows the quantity of respondents in each group. The most common response is that they follow somewhat closely and the other responses are relatively even. 
 ```{r}
 #| label: fig-figure2
 #| fig-cap: "How Closely People Follow Politics from Responses in a facebook ad"
@@ -91,12 +93,14 @@ ggplot(cleaned_data, aes(x = "", fill = follow_politics)) +
 
 
 ```
+## Missing Data {#sec-Missing_data}
+
 # Model
 
 simple regression of income and politics data controlling for race 
 
 # Discussion
-
+like to incluse variables like state etc data set too small/ incomplete for that
 ## First discussion point {#sec-first-point}
 
 If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 

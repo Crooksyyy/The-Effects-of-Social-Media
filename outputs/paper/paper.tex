@@ -161,6 +161,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
+  pdftitle={Paper 2},
   pdfauthor={Gavin Crooks; Samarth Rajani},
   colorlinks=true,
   linkcolor={blue},
@@ -169,10 +170,16 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
+\title{Paper 2\thanks{Code and data are available at:
+LINK.https://github.com/Crooksyyy/The-Effects-of-Social-Media}}
 \author{Gavin Crooks \and Samarth Rajani}
 \date{February 14, 2024}
 
 \begin{document}
+\maketitle
+\begin{abstract}
+First sentence. Second sentence. Third sentence. Fourth sentence.
+\end{abstract}
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -221,7 +228,7 @@ questionnaire. (\textbf{figure1?}) closely resembles the expected
 distribution of USA household income. As expected in any income
 distribution the majority of responses fall within the average income
 ranges of the USA, between 20,000USD and 100,000USD. These factors
-indicate that the data set has an accurate respresentation of household
+indicate that the data set has an accurate representation of household
 income.
 
 \begin{figure}
@@ -286,7 +293,10 @@ across respondents. To be specific we mean someone who identifies as
 someone who does follows Not at all closely can be following politics
 more than someone who identifies as Somewhat closely. This is a
 measurement issue within to the questions asked in the survey and all
-self identifying variables in general.
+self identifying variables in general. (\textbf{figure2?}) shows the
+quantity of respondents in each group. The most common response is that
+they follow somewhat closely and the other responses are relatively
+even.
 
 \begin{figure}
 
@@ -301,13 +311,16 @@ Responses in a facebook ad}
 
 \end{figure}%
 
+\subsection{Missing Data}\label{sec-Missing_data}
+
 \section{Model}\label{model}
 
 simple regression of income and politics data controlling for race
 
 \section{Discussion}\label{discussion}
 
-\subsection{First discussion point}\label{sec-first-point}
+like to incluse variables like state etc data set too small/ incomplete
+for that \#\# First discussion point \{\#sec-first-point\}
 
 If my paper were 10 pages, then should be be at least 2.5 pages. The
 discussion is a chance to show off what you know and what you learnt

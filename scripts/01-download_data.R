@@ -19,7 +19,6 @@ library(data.table)
 
 base_data <- read_dta("inputs/data/base_data.dta")
 
-
 #### Save data ####
 write_csv(base_data,"inputs/data/base_data.csv" )
 
