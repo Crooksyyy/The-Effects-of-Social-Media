@@ -25,9 +25,9 @@ household_income <- sample(income_categories, size = num_samples, replace = TRUE
 
 # Ethnicity categories
 race_categories <- c("Asian or Pacific Islander", "White / Caucasian", "Hispanic",
-                     "Black or African American", "other")
+                     "Black or African American", "American Indian or Alaskan Native", "other")
 race <- sample(race_categories, size = num_samples, replace = TRUE,
-               prob = c(0.075,0.75,0.125,0.9,0.1))
+               prob = c(0.075,0.75,0.125,0.9,0.075,0.05))
 
 # Follows Politics 
 follow_politics_categories <- c("Somewhat closely", "Not at all closely", 
@@ -52,7 +52,7 @@ sim_data <- data.frame(
 head(data)
 
 # Save simulated data
-write_csv(sim_data,"inputs/data/simulated_data.csv" )
+write_csv(sim_data,"outputs/data/simulated_data.csv" )
 
 
 
