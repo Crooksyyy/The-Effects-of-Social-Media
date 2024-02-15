@@ -29,6 +29,10 @@ cleaned_data <- read_csv(here::here("outputs/Data/analysis_data.csv"))
 
 
 # Introduction
+Household income is defined as the gross income earned by all members in a household above 15 years of age (https://www.investopedia.com/terms/h/household_income.asp). Over the years, it has been debated whether household incomes at all affect one’s affiliation toward a political school of thought. It is a reasonable hypothesis to assume a sort of relationship between income and voting either Democrat or Republican, as both parties have different economic outlooks thereby affecting incomes differently. Presumably, a higher income inequality polarizes political leaning further. Therefore it is in our best interests to study whether the economically disadvantaged vote to improve their quality of life. 
+ 
+In ‘Income Inequality and Partisan Voting in the United States’, Andrew Gelman, Lane Kenworthy and Yu-Sung Su (https://www.jstor.org/stable/42956457?seq=11) make a case for higher earning Americans voting Republican, whereas Jeff Madrick (https://www.nytimes.com/2020/07/31/books/review/the-system-robert-reich-break-em-up-zephyr-teachout.html) argues how working-class Americans voted supposedly against their interests in voting Republican. Conflicting theories have emerged, and we intend to tackle this issue at hand of whether different income brackets tend to vote differently. 
+
 
 The introduction is self-contained and tells a reader everything they need to know including: 1) broader context to motivate; 2) some detail about what the paper is about; 3) a clear gap that needs to be filled; 4) what was done; 5) what was found; 6) why it is important; 7) the structure of the paper. A reader should be able to read only the introduction and know what was done, why, and what was found. Likely 3 or 4 paragraphs, or 10 per cent of total.
 
@@ -112,7 +116,7 @@ ggplot(cleaned_data, aes(x = follow_trump, fill = race)) +
 ```
 ```{r}
 #| label: fig-figure3
-#| fig-cap: ""
+#| fig-cap: "Number of Respondents who follow Donald Trump at different levels by Household Income"
 #| warning: false
 #| message: false
 #| echo: false
@@ -130,9 +134,8 @@ cleaned_data <- cleaned_data %>%
 
 ggplot(cleaned_data, aes(x = follow_trump, fill = income_group)) +
   geom_bar(position = 'stack', color = 'black', stat = 'count') +
-  labs(title = "Number of People Following Trump by Income Group",
-       x = "Follows Trump",
-       y = "Count") +
+  labs(x = "Follows Trump",
+       y = "Number of Responses") +
   scale_fill_manual(values = c(
     "$0 to $19,999" = 'lightblue',
     "$20,000 to $49,999" = 'lightcoral',

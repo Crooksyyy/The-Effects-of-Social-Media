@@ -16,8 +16,7 @@ cleaned_data <- cleaned_data %>%
   drop_na()
 
 
-view(cleaned_data)
-
+View(cleaned_data)
 #### Save data ####
 write_csv(cleaned_data, "outputs/data/analysis_data.csv")
 

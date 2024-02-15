@@ -1,32 +1,30 @@
 #### Preamble ####
-# Purpose: Models... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
-# License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Purpose: Simple Regression model of following trump vy income controlled by race and politically invovled
+# Author: Gavin Crooks and Samarth Rajani
+# Date: 14 February 2024 
+# Contact: gavin.crooks@mail.utoronto.ca or samarth.rajani@mail.utoronto.ca
+# Pre-requisites: 01-download_data and 02-data_cleaning  or 00-simulate_data 
 
 
 #### Workspace setup ####
 library(tidyverse)
-library(rstanarm)
 
 #### Read data ####
-analysis_data <- read_csv("outputs/data/analysis_data.csv")
+cleaned_data <- read_csv("outputs/data/analysis_data.csv")
+
+# Convert categorical variables to factors
+# Code found from r bloggers
+# https://www.r-bloggers.com/2020/10/hack-how-to-convert-all-character-variables-to-factors/
+cleaned_data[sapply(cleaned_data, is.character)] <- lapply(cleaned_data[sapply(cleaned_data, is.character)], 
+                                                           as.factor)
+
+sapply(cleaned_data, class)
+
+
 
 ### Model data ####
-first_model <-
-  stan_glm(
-    formula = flying_time ~ length + width,
-    data = analysis_data,
-    family = gaussian(),
-    prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
-    prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
-    prior_aux = exponential(rate = 1, autoscale = TRUE),
-    seed = 853
-  )
-
+model <- lm(factor(follow_trump) ~ factor(hhld_inc), cleaned_data)
+summary(model)
 
 #### Save model ####
 saveRDS(
