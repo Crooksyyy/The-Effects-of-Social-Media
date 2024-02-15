@@ -52,46 +52,6 @@
   \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{241,243,245}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
-\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
@@ -229,7 +189,7 @@ First sentence. Second sentence. Third sentence. Fourth sentence.
 \setcounter{tocdepth}{3}
 \tableofcontents
 }
-\section{Introduction}\label{intro}
+\section{Introduction}\label{sec-intro}
 
 Household income is defined as the gross income earned by all members in
 a household above 15 years of age (SCOTT 2024). Over the years, it has
@@ -244,48 +204,47 @@ study whether the poor vote to improve their quality of life.
 In `Income Inequality and Partisan Voting in the United States', Andrew
 Gelman, Lane Kenworthy and Yu-Sung Su (Gelman, Kenworthy, and Su 2010)
 make a case for higher earning Americans voting Republican, whereas Jeff
-Madrick (\textbf{article?}) argues how working-class Americans voted
-against their interests in voting Republican. Conflicting theories have
-emerged, and we intend on tackling this issue at hand of whether
-different income brackets tend to vote differently.
+Madrick (Madrick 2020) argues how working-class Americans voted against
+their interests in voting Republican. Conflicting theories have emerged,
+and we intend on tackling this issue at hand of whether different income
+brackets tend to vote differently.
+
+The remainder of this paper is structured as follows.
+Section~\ref{sec-data} will intorduce the data set and the variables it
+contains. Section~\ref{sec-results} will display the findings of our
+data in relation to our paper. Section~\ref{sec-data} focuses on the
+strength and weaknesses of our paper.
 
 Our data has been obtained from `The Welfare Effects of Social Media'
-(\textbf{paper?}) . Our code is supported by the following packages (R
-Core Team 2022) (Wickham et al. 2019) (\textbf{her?}) (Xie 2023)
+(Allcott et al. 2020) . Our code is supported by the following packages
+(R Core Team 2022) (Wickham et al. 2019) (Müller 2020) (Xie 2023)
 
 \section{Data}\label{sec-data}
 
 \subsection{Data Introduction}\label{sec-dataintro}
 
-The data used in this paper is from (cite og paper). The data used in
-the paper is extremely complicated as it combines numerous data sets to
-complete their analysis. In this paper, we wanted to simplify the data
-to determine if their paper had underlying biases within the data. To do
-this we focused on one of their eleven data sets, baseline dataset as it
-was the most comprehensive. This data was collected through a facebook
-ad. The respondents answered a number of questions including questions
-about income, ethnicity, family, political beliefs and political
-following. THis is a very useful data set outside the scope of the
-original paper as it can be analyzed to answer a number of questions.
-The data set was cleaned to focus on respondents income, race and how
-closely they follow politics. This provided a data set of approximately
-6000 complete responses after removing unfinished responses. This was a
-substantial decrease from the orignal 24000 responses in the data.
+The data for this paper was collected from the replication package of
+the paper `The Welfare Effects of Social Media'(Allcott et al. 2020) The
+authors from that data had collected this data themselves using an
+online survey platform called Qulatrics, inquiring about personal
+information such as personal names, IP addresses, extent of by which the
+subjects follow politics, etc. Notably the dataset would contain a lot
+of confidential information, that if released in the replication package
+would cause ethical problems. As a result, the authors included the
+de-identified versions of their data collected, which was used in our
+analysis too.
 
 \subsection{Income Data}\label{sec-income_data}
 
-The variable within the data was the income variable. The questionnaire
-included a categorical value for the the household income of
-respondents. The data can be visualized in (\textbf{figure1?}). This
-graph illustrates that the least number of households make greater than
-100,000 USD, below 20,000USD or preferred not to answer. This graph also
-shows what the categorical option were for the respondents to the
-questionnaire. (\textbf{figure1?}) closely resembles the expected
-distribution of USA household income. As expected in any income
-distribution the majority of responses fall within the average income
-ranges of the USA, between 20,000USD and 100,000USD. These factors
-indicate that the data set has an accurate representation of household
-income.
+Our key variables of interest include household income. The survey
+participants were offered options in bins starting at 0 to 9,999 US
+dollar range, with every succeeding bin also being 9,999 USD wide. The
+bins went up to a ceiling of 50,000 USD per annum, then every next bin
+was 25,000 USD wide until a ceiling of 150,000 USD. In our analysis we
+combine the bins above 9,999 into -- 20,000 to 49,999, 50,000 to 99,999
+and the rest being 100,000 and up. The option of `Prefer not to answer'
+was also available, and the entries with that response were dropped. The
+distribution of the data can be seen in Figure~\ref{fig-figure1} .
 
 \begin{figure}
 
@@ -300,21 +259,30 @@ facebook ad}
 
 \end{figure}%
 
+\subsection{Politics Data}\label{sec-pol_data}
+
+Another variable of use is the extent to which the subjects follow
+Mr.~Donald Trump, leader of the Republican Party. The possible responses
+were `Not at all closely', `Somewhat closely,' `Rather closely' and
+`Very Closely,' and the respondents could select one of these options
+which will become our measure of measuring subscription to Republican
+ideas. This data is represented using a pie chart in
+Figure~\ref{fig-figure2}.
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{paper_files/figure-pdf/fig-figure2-1.pdf}
+
+}
+
+\caption{\label{fig-figure2}How Closely People Follow Mr.Donald Trump
+from Responses in a facebook ad}
+
+\end{figure}%
+
 \subsection{Ethnicity Data}\label{sec-race_data}
-
-The second question of the data that we have included in our analysis is
-the ethnicity of the respondents. This again is a categorical variable,
-that the individual self identifies their own ethnicity. The response
-options included Asian or Pacific Islander, White / Caucasian, Hispanic,
-Black or African American and other. (\textbf{race\_dist?}) shows the
-percentage of respondents in each with the overwhelming majority of
-responses being Caucasian at nearly 70\%. This is actually less than the
-most recent estimates by the United States government which estimate
-over 75\% of the population is Caucasian (cite us gov). The data also
-has an over representation of Asian and Native Americans. This results
-in an under representation of Hispanic and African American populations.
-
-https://www.census.gov/quickfacts/fact/table/US/PST045222
 
 \begin{longtable}[]{@{}lr@{}}
 
@@ -338,88 +306,7 @@ White / Caucasian & 68.9273124 \\
 
 \end{longtable}
 
-\subsection{Politics Data}\label{sec-pol_data}
-
-The third variable in the data that is included in our analysis is a
-variable of respondents self identifying how closely they follow
-politics. This is another categorical variable measured as Not at all
-closely, Somewhat closely, Rather closely and Very closely. This
-variable faces many problems as this categorical scale is not consistent
-across respondents. To be specific we mean someone who identifies as
-someone who does follows Not at all closely can be following politics
-more than someone who identifies as Somewhat closely. This is a
-measurement issue within to the questions asked in the survey and all
-self identifying variables in general. (\textbf{figure2?}) shows the
-quantity of respondents in each group. The most common response is that
-they follow somewhat closely and the other responses are relatively
-even.
-
-\begin{figure}
-
-\centering{
-
-\includegraphics{paper_files/figure-pdf/fig-figure2-1.pdf}
-
-}
-
-\caption{\label{fig-figure2}How Closely People Follow Mr.Donald Trump
-from Responses in a facebook ad}
-
-\end{figure}%
-
-\subsection{Missing Data}\label{sec-Missing_data}
-
-\begin{figure}
-
-\centering{
-
-\includegraphics{paper_files/figure-pdf/fig-figure4-1.pdf}
-
-}
-
-\caption{\label{fig-figure4}Number of Respondents who follow Donald
-Trump at different levels by Race}
-
-\end{figure}%
-
-\begin{figure}
-
-\centering{
-
-\includegraphics{paper_files/figure-pdf/fig-figure3-1.pdf}
-
-}
-
-\caption{\label{fig-figure3}Number of Respondents who follow Donald
-Trump at different levels by Household Income}
-
-\end{figure}%
-
-\section{Results}\label{results}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Create a table of proportions}
-\NormalTok{income\_follow\_table }\OtherTok{\textless{}{-}} \FunctionTok{table}\NormalTok{(cleaned\_data}\SpecialCharTok{$}\NormalTok{follow\_trump, cleaned\_data}\SpecialCharTok{$}\NormalTok{income\_group)}
-\NormalTok{income\_proportions }\OtherTok{\textless{}{-}} \FunctionTok{prop.table}\NormalTok{(income\_follow\_table, }\AttributeTok{margin =} \DecValTok{1}\NormalTok{) }\SpecialCharTok{*} \DecValTok{100} 
-
-\NormalTok{table1 }\OtherTok{\textless{}{-}} \FunctionTok{tibble}\NormalTok{(income\_proportions, }\FunctionTok{colnames}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\StringTok{"Income Group"}\NormalTok{, }\StringTok{"Follows Trump"}\NormalTok{ )))}
-\FunctionTok{show}\NormalTok{(table1)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-# A tibble: 4 x 1
-  income_proportions[,"$0 to $19,9~1 [,"$100,000 and up"] [,"$20,000 to $49,99~2
-                               <dbl>                <dbl>                  <dbl>
-1                               9.12                 16.9                   28.1
-2                               5.86                 22.5                   29.0
-3                               7.57                 20.2                   29.3
-4                               6.73                 22.4                   25.3
-# i abbreviated names: 1: income_proportions[,"$0 to $19,999"],
-#   2: [,"$20,000 to $49,999"]
-# i 1 more variable: income_proportions[4:5] <dbl>
-\end{verbatim}
+\section{Results}\label{sec-results}
 
 This papers goal was to identify if lower income household voted against
 their own interest. To understand this relationship we used the variable
@@ -435,6 +322,19 @@ conclude that income class impacts how closely individuals follow
 Mr.~Donald Trump, and therefor, cannot conclude that different income
 levels subscribe to republican ideas more than the other.
 
+\begin{figure}
+
+\centering{
+
+\includegraphics{paper_files/figure-pdf/fig-figure3-1.pdf}
+
+}
+
+\caption{\label{fig-figure3}Number of Respondents who follow Donald
+Trump at different levels by Household Income}
+
+\end{figure}%
+
 To further our analysis we computed the same graph however organized by
 race not income Figure~\ref{fig-figure4}. This resulted in a similar
 result as race is proportional between all levels of following
@@ -445,39 +345,24 @@ race. Obviously, this is more difficult to conclude for minorities as
 their representation within the data set is so small as stated in
 Section~\ref{sec-race_data}
 
+\begin{figure}
+
+\centering{
+
+\includegraphics{paper_files/figure-pdf/fig-figure4-1.pdf}
+
+}
+
+\caption{\label{fig-figure4}Number of Respondents who follow Donald
+Trump at different levels by Race}
+
+\end{figure}%
+
 Overall, the results of this analysis were inconclusive to measure how
 income impacts individuals propensity to follow republican rhetoric.
 There are many reasons this could be true and as stated in the
-(\textbf{intro?}) there are multiple schools of thought previously
+Section~\ref{sec-intro} there are multiple schools of thought previously
 studies on the topic.
-
-\section{Discussion}\label{discussion}
-
-like to incluse variables like state etc data set too small/ incomplete
-for that \#\# First discussion point \{\#sec-first-point\}
-
-If my paper were 10 pages, then should be be at least 2.5 pages. The
-discussion is a chance to show off what you know and what you learnt
-from all this.
-
-\subsection{Second discussion point}\label{second-discussion-point}
-
-\subsection{Third discussion point}\label{third-discussion-point}
-
-\subsection{Weaknesses and next steps}\label{weaknesses-and-next-steps}
-
-Weaknesses and next steps should also be included.
-
-\newpage
-
-\appendix
-
-\section*{Appendix}\label{appendix}
-\addcontentsline{toc}{section}{Appendix}
-
-\section{Additional data details}\label{additional-data-details}
-
-\section{Model details}\label{sec-model-details}
 
 \newpage
 
@@ -486,7 +371,7 @@ Weaknesses and next steps should also be included.
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
-\bibitem[\citeproctext]{ref-10.1257ux2faer.20190658}
+\bibitem[\citeproctext]{ref-paper}
 Allcott, Hunt, Luca Braghieri, Sarah Eichmeyer, and Matthew Gentzkow.
 2020. {``The Welfare Effects of Social Media.''} \emph{American Economic
 Review}. \url{https://doi.org/10.1257/aer.20190658}.
@@ -502,7 +387,7 @@ Madrick, Jeff. 2020. {``Why the Working Class Votes Against Its Economic
 Interests.''} \emph{The New York Times}, July.
 \url{https://www.nytimes.com/2020/07/31/books/review/the-system-robert-reich-break-em-up-zephyr-teachout.html}.
 
-\bibitem[\citeproctext]{ref-here}
+\bibitem[\citeproctext]{ref-her}
 Müller, Kirill. 2020. {``Here: A Simpler Way to Find Your Files.''}
 \url{https://CRAN.R-project.org/package=here}.
 
