@@ -211,9 +211,11 @@
   pdfcreator={LaTeX via pandoc}}
 
 \title{Paper 2\thanks{Code and data are available at:
-LINK.https://github.com/Crooksyyy/The-Effects-of-Social-Media}}
+LINK.https://github.com/Crooksyyy/The-Effects-of-Social-Media , Original
+data available
+https://www.openicpsr.org/openicpsr/project/112081/version/V1/view}}
 \author{Gavin Crooks \and Samarth Rajani}
-\date{February 14, 2024}
+\date{February 15, 2024}
 
 \begin{document}
 \maketitle
@@ -227,15 +229,29 @@ First sentence. Second sentence. Third sentence. Fourth sentence.
 \setcounter{tocdepth}{3}
 \tableofcontents
 }
-\section{Introduction}\label{introduction}
+\section{Introduction}\label{intro}
 
-The introduction is self-contained and tells a reader everything they
-need to know including: 1) broader context to motivate; 2) some detail
-about what the paper is about; 3) a clear gap that needs to be filled;
-4) what was done; 5) what was found; 6) why it is important; 7) the
-structure of the paper. A reader should be able to read only the
-introduction and know what was done, why, and what was found. Likely 3
-or 4 paragraphs, or 10 per cent of total.
+Household income is defined as the gross income earned by all members in
+a household above 15 years of age (SCOTT 2024). Over the years, it has
+been debated whether household incomes at all affect one's affiliation
+towards a political school of thought. It is a reasonable hypothesis to
+assume a sort of relationship between income and voting either Democrat
+or Republican, as both parties have different economic outlooks thereby
+affecting incomes differently. Maybe higher income inequality polarizes
+political leaning further. Therefore, it is in our best interests to
+study whether the poor vote to improve their quality of life.
+
+In `Income Inequality and Partisan Voting in the United States', Andrew
+Gelman, Lane Kenworthy and Yu-Sung Su (Gelman, Kenworthy, and Su 2010)
+make a case for higher earning Americans voting Republican, whereas Jeff
+Madrick (\textbf{article?}) argues how working-class Americans voted
+against their interests in voting Republican. Conflicting theories have
+emerged, and we intend on tackling this issue at hand of whether
+different income brackets tend to vote differently.
+
+Our data has been obtained from `The Welfare Effects of Social Media'
+(\textbf{paper?}) . Our code is supported by the following packages (R
+Core Team 2022) (Wickham et al. 2019) (\textbf{her?}) (Xie 2023)
 
 \section{Data}\label{sec-data}
 
@@ -346,46 +362,94 @@ even.
 
 }
 
-\caption{\label{fig-figure2}How Closely People Follow Politics from
-Responses in a facebook ad}
+\caption{\label{fig-figure2}How Closely People Follow Mr.Donald Trump
+from Responses in a facebook ad}
 
 \end{figure}%
 
 \subsection{Missing Data}\label{sec-Missing_data}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Parts of this code from R{-}charts}
-\CommentTok{\#https://r{-}charts.com/part{-}whole/stacked{-}bar{-}chart{-}ggplot2/}
-\CommentTok{\# Assisited by Chat GPT3.5 {-} view full chat in inputs/llms/usage.txt}
-\FunctionTok{ggplot}\NormalTok{(cleaned\_data, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ follow\_trump, }\AttributeTok{fill =}\NormalTok{ race)) }\SpecialCharTok{+}
-  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{position =} \StringTok{\textquotesingle{}stack\textquotesingle{}}\NormalTok{, }\AttributeTok{color =} \StringTok{\textquotesingle{}black\textquotesingle{}}\NormalTok{, }\AttributeTok{stat =} \StringTok{\textquotesingle{}count\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Number of People Following Trump by Race"}\NormalTok{,}
-       \AttributeTok{x =} \StringTok{"Follows Trump"}\NormalTok{,}
-       \AttributeTok{y =} \StringTok{"Count"}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{scale\_fill\_manual}\NormalTok{(}\AttributeTok{values =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}White / Caucasian\textquotesingle{}} \OtherTok{=} \StringTok{\textquotesingle{}lightblue\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Black or African American\textquotesingle{}} \OtherTok{=} \StringTok{\textquotesingle{}lightcoral\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Asian or Pacific Islander\textquotesingle{}} \OtherTok{=} \StringTok{\textquotesingle{}lightgreen\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Hispanic\textquotesingle{}} \OtherTok{=} \StringTok{\textquotesingle{}plum\textquotesingle{}}\NormalTok{,}
-                               \StringTok{\textquotesingle{}Other  (please specify)\textquotesingle{}} \OtherTok{=} \StringTok{\textquotesingle{}lightgoldenrodyellow\textquotesingle{}}\NormalTok{)) }\SpecialCharTok{+}
-  \FunctionTok{theme\_minimal}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
+\begin{figure}
 
-\includegraphics{paper_files/figure-pdf/unnamed-chunk-5-1.pdf}
+\centering{
+
+\includegraphics{paper_files/figure-pdf/fig-figure4-1.pdf}
+
+}
+
+\caption{\label{fig-figure4}Number of Respondents who follow Donald
+Trump at different levels by Race}
+
+\end{figure}%
 
 \begin{figure}
 
 \centering{
 
-\captionsetup{labelsep=none}\includegraphics{paper_files/figure-pdf/fig-figure3-1.pdf}
+\includegraphics{paper_files/figure-pdf/fig-figure3-1.pdf}
 
 }
 
-\caption{\label{fig-figure3}}
+\caption{\label{fig-figure3}Number of Respondents who follow Donald
+Trump at different levels by Household Income}
 
 \end{figure}%
 
-\section{Model}\label{model}
+\section{Results}\label{results}
 
-simple regression of income and politics data controlling for race
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Create a table of proportions}
+\NormalTok{income\_follow\_table }\OtherTok{\textless{}{-}} \FunctionTok{table}\NormalTok{(cleaned\_data}\SpecialCharTok{$}\NormalTok{follow\_trump, cleaned\_data}\SpecialCharTok{$}\NormalTok{income\_group)}
+\NormalTok{income\_proportions }\OtherTok{\textless{}{-}} \FunctionTok{prop.table}\NormalTok{(income\_follow\_table, }\AttributeTok{margin =} \DecValTok{1}\NormalTok{) }\SpecialCharTok{*} \DecValTok{100} 
+
+\NormalTok{table1 }\OtherTok{\textless{}{-}} \FunctionTok{tibble}\NormalTok{(income\_proportions, }\FunctionTok{colnames}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\StringTok{"Income Group"}\NormalTok{, }\StringTok{"Follows Trump"}\NormalTok{ )))}
+\FunctionTok{show}\NormalTok{(table1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+# A tibble: 4 x 1
+  income_proportions[,"$0 to $19,9~1 [,"$100,000 and up"] [,"$20,000 to $49,99~2
+                               <dbl>                <dbl>                  <dbl>
+1                               9.12                 16.9                   28.1
+2                               5.86                 22.5                   29.0
+3                               7.57                 20.2                   29.3
+4                               6.73                 22.4                   25.3
+# i abbreviated names: 1: income_proportions[,"$0 to $19,999"],
+#   2: [,"$20,000 to $49,999"]
+# i 1 more variable: income_proportions[4:5] <dbl>
+\end{verbatim}
+
+This papers goal was to identify if lower income household voted against
+their own interest. To understand this relationship we used the variable
+for how closely a respondent follows Mr.~Donald Trump as our measurement
+of subscription to Republican ideas. Using this measurement, we
+organized the proportion of individuals by income class to how closely
+they follow Mr.~Donald Trump in Figure~\ref{fig-figure3}. This graph
+shows that a proportional amount of each income class follows Mr.~Donald
+Trump at similar levels across all income levels. Specifically, we mean
+the percentage of individuals follow Mr.~Donald Trump at different
+levels is the same no matter the income class. This means we can not
+conclude that income class impacts how closely individuals follow
+Mr.~Donald Trump, and therefor, cannot conclude that different income
+levels subscribe to republican ideas more than the other.
+
+To further our analysis we computed the same graph however organized by
+race not income Figure~\ref{fig-figure4}. This resulted in a similar
+result as race is proportional between all levels of following
+Mr.~Donald Trump. Therefore, consistent across races at to following
+republican rhetoric. Again, this means the same percentage of people
+that follow Mr.~Donald Trump at different levels is the same for each
+race. Obviously, this is more difficult to conclude for minorities as
+their representation within the data set is so small as stated in
+Section~\ref{sec-race_data}
+
+Overall, the results of this analysis were inconclusive to measure how
+income impacts individuals propensity to follow republican rhetoric.
+There are many reasons this could be true and as stated in the
+(\textbf{intro?}) there are multiple schools of thought previously
+studies on the topic.
 
 \section{Discussion}\label{discussion}
 
@@ -422,37 +486,44 @@ Weaknesses and next steps should also be included.
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
-\bibitem[\citeproctext]{ref-citeLahman}
-Friendly, Michael, Chris Dalzell, Martin Monkman, and Dennis Murphy.
-2020. \emph{Lahman: Sean {``Lahman''} Baseball Database}.
-\url{https://CRAN.R-project.org/package=Lahman}.
+\bibitem[\citeproctext]{ref-10.1257ux2faer.20190658}
+Allcott, Hunt, Luca Braghieri, Sarah Eichmeyer, and Matthew Gentzkow.
+2020. {``The Welfare Effects of Social Media.''} \emph{American Economic
+Review}. \url{https://doi.org/10.1257/aer.20190658}.
 
-\bibitem[\citeproctext]{ref-gebru2021datasheets}
-Gebru, Timnit, Jamie Morgenstern, Briana Vecchione, Jennifer Wortman
-Vaughan, Hanna Wallach, Hal Daumé Iii, and Kate Crawford. 2021.
-{``Datasheets for Datasets.''} \emph{Communications of the ACM} 64 (12):
-86--92.
+\bibitem[\citeproctext]{ref-lane}
+Gelman, Andrew, Lane Kenworthy, and Yu-Sung Su. 2010. {``Income
+Inequality and Partisan Voting in the United States.''} \emph{Social
+Science Quarterly}. {[}University of Texas Press, Wiley{]}.
+\url{http://www.jstor.org/stable/42956457}.
 
-\bibitem[\citeproctext]{ref-rstanarm}
-Goodrich, Ben, Jonah Gabry, Imad Ali, and Sam Brilleman. 2022.
-{``Rstanarm: {Bayesian} Applied Regression Modeling via {Stan}.''}
-\url{https://mc-stan.org/rstanarm/}.
+\bibitem[\citeproctext]{ref-Madrick_2020}
+Madrick, Jeff. 2020. {``Why the Working Class Votes Against Its Economic
+Interests.''} \emph{The New York Times}, July.
+\url{https://www.nytimes.com/2020/07/31/books/review/the-system-robert-reich-break-em-up-zephyr-teachout.html}.
 
-\bibitem[\citeproctext]{ref-palmerpenguins}
-Horst, Allison Marie, Alison Presmanes Hill, and Kristen B Gorman. 2020.
-\emph{Palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data}.
-\url{https://doi.org/10.5281/zenodo.3960218}.
+\bibitem[\citeproctext]{ref-here}
+Müller, Kirill. 2020. {``Here: A Simpler Way to Find Your Files.''}
+\url{https://CRAN.R-project.org/package=here}.
 
 \bibitem[\citeproctext]{ref-citeR}
 R Core Team. 2022. \emph{R: A Language and Environment for Statistical
 Computing}. Vienna, Austria: R Foundation for Statistical Computing.
 \url{https://www.R-project.org/}.
 
-\bibitem[\citeproctext]{ref-thereferencecanbewhatever}
+\bibitem[\citeproctext]{ref-hhld}
+SCOTT, MICHELLE P. 2024. {``Household Income.''} investopedia.
+\url{https://www.investopedia.com/terms/h/household_income.asp}.
+
+\bibitem[\citeproctext]{ref-tidy}
 Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy
 D'Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019.
-{``Welcome to the {tidyverse}.''} \emph{Journal of Open Source Software}
-4 (43): 1686. \url{https://doi.org/10.21105/joss.01686}.
+{``Welcome to the {tidyverse}.''} \emph{Journal of Open Source
+Software}. \url{https://doi.org/10.21105/joss.01686}.
+
+\bibitem[\citeproctext]{ref-knitr}
+Xie, Yihui. 2023. {``Knitr: A General-Purpose Package for Dynamic Report
+Generation in r.''} \url{https://yihui.org/knitr/}.
 
 \end{CSLReferences}
 
