@@ -11,7 +11,7 @@ library(tidyverse)
 
 #### Test data ####
 # Open data
-cleaned_data <- read_csv("outputs/Data/analysis_data.csv")
+cleaned_data <- read_csv("outputs/data/analysis_data.csv")
 
 # Test correct number of catergies for each variable
 cleaned_data$follow_trump|>

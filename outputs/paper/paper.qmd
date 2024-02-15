@@ -95,6 +95,20 @@ ggplot(cleaned_data, aes(x = "", fill = follow_politics)) +
 ```
 ## Missing Data {#sec-Missing_data}
 
+
+```{r}
+# Parts of this code from R-charts
+#https://r-charts.com/part-whole/stacked-bar-chart-ggplot2/
+ggplot(cleaned_data, aes(x = follow_trump, fill = race)) +
+  geom_bar(position = 'stack', color = 'black', stat = 'count') +
+  labs(title = "Number of People Following Trump by Race",
+       x = "Follows Trump",
+       y = "Count") +
+  scale_fill_manual(values = c('White / Caucasian' = 'lightblue', 'Black or African American' = 'lightcoral', 'Asian or Pacific Islander' = 'lightgreen', 'Hispanic' = 'plum',
+                               'Other  (please specify)' = 'lightgoldenrodyellow')) +
+  theme_minimal()
+
+```
 # Model
 
 simple regression of income and politics data controlling for race 
