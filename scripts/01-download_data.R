@@ -1,9 +1,8 @@
 #### Preamble ####
-# Purpose: Saves the Data into Repo as CSV 
+# Purpose: Saves the Data into Repo as CSV and as original dta file
 # Author: Gavin Crooks and Samarth Rajani
 # Date: Feb 12, 2024
 # Contact: gavin.crooks@mail.utoronto.ca or samarth.rajani@mail.utoronto.ca
-# License: MIT
 # Pre-requisites: N/A
 
 
