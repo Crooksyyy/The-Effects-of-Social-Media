@@ -17,3 +17,11 @@ The repo is structured as:
 
 ## LLM's (Large Language Models)
 In today's world, it is important to note if and how LLM's were used to produce this repo. Aspects of the code were written with the help of ChatGPT 3.5. The entire chat history is available in inputs/llms/usage.txt.
+
+## Data 
+It is important to note the raw data in this repo cannot be accessed directly through R as a result of the large files. To obtain the raw data please visit the link below. The file used for this repo is named baseline_anonymous.dta.
+
+https://www.openicpsr.org/openicpsr/project/112081/version/V1/view?path=/openicpsr/112081/fcr:versions/V1/confidential/main_experiment/output&type=folder
+
+It can also be downloaded from this repo in the folder inputs/data/base_data.csv or inputs/data/base_data.dta
+The raw data files

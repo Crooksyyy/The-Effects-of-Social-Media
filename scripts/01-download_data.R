@@ -10,7 +10,6 @@
 #### Workspace setup ####
 library(haven)
 library(tidyverse)
-library(data.table)
 
 #### Download data ####
 ### Data can be downloaded from the URL below as file format does not allow it to be opened directly or from folder in repo 
