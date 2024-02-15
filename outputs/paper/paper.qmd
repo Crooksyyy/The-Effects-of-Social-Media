@@ -3,7 +3,7 @@ title: "Paper 2"
 author: 
   - Gavin Crooks
   - Samarth Rajani
-thanks: "Code and data are available at: LINK.https://github.com/Crooksyyy/The-Effects-of-Social-Media , Original data available https://www.openicpsr.org/openicpsr/project/112081/version/V1/view"
+thanks: "Code and data are available at: LINK.https://github.com/Crooksyyy/The-Effects-of-Social-Media"
 date: today
 date-format: long
 abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
@@ -11,8 +11,7 @@ format: pdf
 number-sections: true
 toc: true
 bibliography: references.bib 
-nocite: |
-  @*
+
 ---
 
 ```{r}
@@ -135,7 +134,9 @@ ggplot(cleaned_data, aes(x = follow_trump, fill = income_group)) +
     "$100,000 and up" = 'plum',
     "Unknown or Prefer not to answer" = 'lightgrey'
   )) +
-  theme_minimal()
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+
 
 ```
 
@@ -152,12 +153,12 @@ To further our analysis we computed the same graph however organized by race not
 # Assisted by Chat GPT3.5 - view full chat in inputs/llms/usage.txt
 ggplot(cleaned_data, aes(x = follow_trump, fill = race)) +
   geom_bar(position = 'stack', color = 'black', stat = 'count') +
-  labs(title = "Number of People Following Trump by Race",
-       x = "Follows Trump",
+  labs(x = "Follows Trump",
        y = "Count") +
   scale_fill_manual(values = c('White / Caucasian' = 'lightblue', 'Black or African American' = 'lightcoral', 'Asian or Pacific Islander' = 'lightgreen', 'Hispanic' = 'plum',
                                'Other  (please specify)' = 'lightgoldenrodyellow')) +
-  theme_minimal()
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
 
 ```
 
