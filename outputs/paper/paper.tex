@@ -161,7 +161,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={Paper 2},
+  pdftitle={How Household Income Impacts Political Views, Focusing on Mr.~Donald Trump, Yielded Inconclusive Results},
   pdfauthor={Gavin Crooks; Samarth Rajani},
   colorlinks=true,
   linkcolor={blue},
@@ -170,7 +170,9 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
-\title{Paper 2\thanks{Code and data are available at:
+\title{How Household Income Impacts Political Views, Focusing on
+Mr.~Donald Trump, Yielded Inconclusive Results\thanks{Code and data are
+available at:
 LINK.https://github.com/Crooksyyy/The-Effects-of-Social-Media}}
 \author{Gavin Crooks \and Samarth Rajani}
 \date{February 15, 2024}
@@ -178,7 +180,16 @@ LINK.https://github.com/Crooksyyy/The-Effects-of-Social-Media}}
 \begin{document}
 \maketitle
 \begin{abstract}
-First sentence. Second sentence. Third sentence. Fourth sentence.
+This study explores the relationship between household income,
+ethnicity, and political preferences using data from `The Welfare
+Effects of Social Media.' Despite inconclusive findings challenging the
+presumed impact of income on political views, our innovative metric,
+measuring respondents' propensity to follow Donald Trump, did not
+provide conclusive results. This introduces new avenues in political
+science and statistics, encouraging further exploration into
+understanding the dynamics of these relationships. The study contributes
+to the ongoing discourse on the complex relationships between income,
+ethnicity, and political inclinations.
 \end{abstract}
 
 \renewcommand*\contentsname{Table of contents}
@@ -205,13 +216,14 @@ make a case for higher earning Americans voting Republican, whereas Jeff
 Madrick (Madrick 2020) argues how working-class Americans voted against
 their interests in voting Republican. Conflicting theories have emerged,
 and we intend on tackling this issue at hand of whether different income
-brackets tend to vote differently.
+brackets tend to vote differently. By measuring the difference in
+propensity to follow Mr.~Donald Trump in relation to household income.
 
 The remainder of this paper is structured as follows.
-Section~\ref{sec-data} will intorduce the data set and the variables it
+Section~\ref{sec-data} will introduce the data set and the variables it
 contains. Section~\ref{sec-results} will display the findings of our
-data in relation to our paper. Section~\ref{sec-data} focuses on the
-strength and weaknesses of our paper.
+data in relation to our paper. The \textbf{?@sec-disc} will discuss why
+the findings matter and the weaknesses of our analysis.
 
 Our data has been obtained from `The Welfare Effects of Social Media'
 (Allcott et al. 2020) . Our code is supported by the following packages
@@ -242,20 +254,12 @@ was 25,000 USD wide until a ceiling of 150,000 USD. In our analysis we
 combine the bins above 9,999 into -- 20,000 to 49,999, 50,000 to 99,999
 and the rest being 100,000 and up. The option of `Prefer not to answer'
 was also available, and the entries with that response were dropped. The
-distribution of the data can be seen in Figure~\ref{fig-figure1} .
-
-\begin{figure}
-
-\centering{
-
-\includegraphics{paper_files/figure-pdf/fig-figure1-1.pdf}
-
-}
-
-\caption{\label{fig-figure1}Distribution of Income from Responses in a
-facebook ad}
-
-\end{figure}%
+distribution of the data can be seen in Figure~\ref{fig-figure1}.
+Figure~\ref{fig-figure1} closely resembles the expected distribution of
+USA household income. As expected in any income distribution the
+majority of responses fall within the average income ranges of the USA,
+between 20,000USD and 100,000USD (2022). These factors indicate that the
+data set has an accurate representation of household income.
 
 \subsection{Politics Data}\label{sec-pol_data}
 
@@ -265,27 +269,34 @@ were `Not at all closely', `Somewhat closely,' `Rather closely' and
 `Very Closely,' and the respondents could select one of these options
 which will become our measure of measuring subscription to Republican
 ideas. This data is represented using a pie chart in
-Figure~\ref{fig-figure2}.
-
-\begin{figure}
-
-\centering{
-
-\includegraphics{paper_files/figure-pdf/fig-figure2-1.pdf}
-
-}
-
-\caption{\label{fig-figure2}How Closely People Follow Mr.Donald Trump
-from Responses in a facebook ad}
-
-\end{figure}%
+Figure~\ref{fig-figure2}. This variable faces many problems as this
+categorical scale is not consistent across respondents. To be specific
+we mean someone who identifies as someone who does follows Not at all
+closely can be following Mr.~Donald Trump more than someone who
+identifies as Somewhat closely. This is a measurement issue within to
+the questions asked in the survey and all self-identifying variables in
+general. (\textbf{figure2?}) shows the quantity of respondents in each
+group. The most common response is that they follow somewhat closely,
+and the other responses are relatively even.
 
 \subsection{Ethnicity Data}\label{sec-race_data}
+
+The second question of the data that we have included in our analysis is
+the ethnicity of the respondents. This again is a categorical variable,
+that the individual self identifies their own ethnicity. The response
+options included Asian or Pacific Islander, White / Caucasian, Hispanic,
+Black or African American and other. Table~\ref{tbl-race_dist} shows the
+percentage of respondents in each with the overwhelming majority of
+responses being Caucasian at nearly 70\%. This is actually less than the
+most recent estimates by the United States government which estimate
+over 75\% of the population is Caucasian (2022). The data also has an
+over representation of Asian and Native Americans. This results in an
+under representation of Hispanic and African American populations.
 
 \begin{longtable}[]{@{}lr@{}}
 
 \caption{\label{tbl-race\_dist}Percentage of each Ethnicity from
-Responses in a facebook ad}
+Responses in the facebook ad}
 
 \tabularnewline
 
@@ -306,19 +317,19 @@ White / Caucasian & 68.9273124 \\
 
 \section{Results}\label{sec-results}
 
-This papers goal was to identify if lower income household voted against
-their own interest. To understand this relationship we used the variable
-for how closely a respondent follows Mr.~Donald Trump as our measurement
-of subscription to Republican ideas. Using this measurement, we
-organized the proportion of individuals by income class to how closely
-they follow Mr.~Donald Trump in Figure~\ref{fig-figure3}. This graph
-shows that a proportional amount of each income class follows Mr.~Donald
-Trump at similar levels across all income levels. Specifically, we mean
-the percentage of individuals follow Mr.~Donald Trump at different
-levels is the same no matter the income class. This means we can not
-conclude that income class impacts how closely individuals follow
-Mr.~Donald Trump, and therefor, cannot conclude that different income
-levels subscribe to republican ideas more than the other.
+This paper's goal was to identify if lower-income households voted
+against their interest. To understand this relationship, we used the
+variable for how closely a respondent follows Mr.~Donald Trump as our
+measurement of subscription to Republican ideas. Using this measurement,
+we organized the proportion of individuals by income class to how
+closely they follow Mr.~Donald Trump in Figure~\ref{fig-figure3}. This
+graph shows that a proportional amount of each income class follows
+Mr.~Donald Trump at similar levels across all income levels.
+Specifically, we mean the percentage of individuals following Mr.~Donald
+Trump at different levels is the same no matter the income class. This
+means we cannot conclude that income class impacts how closely
+individuals follow Mr.~Donald Trump, and therefore, cannot conclude that
+different income levels subscribe to republican ideas more than others.
 
 \begin{figure}
 
@@ -333,15 +344,15 @@ Trump at different levels by Household Income}
 
 \end{figure}%
 
-To further our analysis we computed the same graph however organized by
-race not income Figure~\ref{fig-figure4}. This resulted in a similar
+To further our analysis, we computed the same graph however organized by
+race, not income Figure~\ref{fig-figure4}. This resulted in a similar
 result as race is proportional between all levels of following
-Mr.~Donald Trump. Therefore, consistent across races at to following
-republican rhetoric. Again, this means the same percentage of people
-that follow Mr.~Donald Trump at different levels is the same for each
-race. Obviously, this is more difficult to conclude for minorities as
-their representation within the data set is so small as stated in
-Section~\ref{sec-race_data}
+Mr.~Donald Trump. Therefore, consistent across races to follow
+republican rhetoric. Again, this means the percentage of people who
+follow Mr.~Donald Trump at different levels is the same for each race.
+This is more difficult to conclude for minorities as their
+representation within the data set is so small as stated in
+Section~\ref{sec-race_data}.
 
 \begin{figure}
 
@@ -357,10 +368,88 @@ Trump at different levels by Race}
 \end{figure}%
 
 Overall, the results of this analysis were inconclusive to measure how
-income impacts individuals propensity to follow republican rhetoric.
+income impacts individuals' propensity to follow republican rhetoric.
 There are many reasons this could be true and as stated in the
-Section~\ref{sec-intro} there are multiple schools of thought previously
-studies on the topic.
+(\textbf{intro?}) there are multiple schools of thought previously
+studied on the topic.
+
+\section{Discussion \{sec-disc\}}\label{discussion-sec-disc}
+
+\subsection{Inconclusive -- not a futile
+exercise}\label{inconclusive-not-a-futile-exercise}
+
+Our results show no evident relationship between income and Republic
+following. This result is important in of itself -- the insignificant
+relationship suggests income does not influence an individual's choice
+of presidential candidate. There can be many possible reasons. The first
+reason is that other factors apart from income influence this choice to
+a much greater extent. For example, a family of 5 kids may be more
+influenced by a candidate promising better institutional infrastructure
+like more schools and subsidized education. As mentioned in `Factors
+Influencing Voting Decision: A Comprehensive Literature Review'
+(Kulachai, Lerdtomornsakul, and Homyamyen 2023), the main headings
+influencing decisions include `demographic factors, psychological
+factors, sociocultural factors and economic factors.' Income is only one
+of the many economic factors, and so may have a very small influence on
+voting preference.
+
+\subsection{Weaknesses}\label{weaknesses}
+
+The analysis in the paper is not perfect, with some changes that can
+make it much more robust. One of the limitations is the race question --
+the limitation of only the choice in the survey means individuals who
+part of any of those races are not included are unable to provide a data
+point. If some of these groups significantly change their voting pattern
+based on income, their contribution is lost. This is a classic case of
+sampling bias. Secondly, any values that were missing from the dataset
+were dropped for this paper. Just as stated previously, the contribution
+of those data points is lost, making our conclusions less precise.
+Lastly, the survey collected data via an online platform, thereby
+leaving out opinions of individuals either not in possession of
+technology or not very adept at operating it such as the elderly. This
+is another sampling bias result, as it leaves out another key societal
+group for the analysis. Thirdly, the income variable only being measured
+as a categorical variable limited our analysis. Income is usually
+measured as a continous variable which would have allowed analysis such
+as regression to be used.
+
+\section*{Appendix}\label{appendix}
+\addcontentsline{toc}{section}{Appendix}
+
+\subsection{Figures}\label{figures}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{paper_files/figure-pdf/fig-figure1-1.pdf}
+
+}
+
+\caption{\label{fig-figure1}Distribution of Income from Responses in the
+facebook ad}
+
+\end{figure}%
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{paper_files/figure-pdf/fig-figure2-1.pdf}
+
+}
+
+\caption{\label{fig-figure2}How Closely People Follow Mr.Donald Trump
+from Responses in the facebook ad}
+
+\end{figure}%
+
+\subsection{Data Cleaning}\label{data-cleaning}
+
+The data cleaning for this analysis was very straightforward. Once the
+data was obtained using the links mentioned in the paper or the github
+repo, the variables reqired for the analysis we compiled and any
+response with missing data was removed.
 
 \newpage
 
@@ -369,6 +458,10 @@ studies on the topic.
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-USA}
+2022. \emph{U.S. Census Bureau Quickfacts: United States}.
+\url{https://www.census.gov/quickfacts/fact/table/US/PST045222}.
+
 \bibitem[\citeproctext]{ref-paper}
 Allcott, Hunt, Luca Braghieri, Sarah Eichmeyer, and Matthew Gentzkow.
 2020. {``The Welfare Effects of Social Media.''} \emph{American Economic
@@ -379,6 +472,12 @@ Gelman, Andrew, Lane Kenworthy, and Yu-Sung Su. 2010. {``Income
 Inequality and Partisan Voting in the United States.''} \emph{Social
 Science Quarterly}. {[}University of Texas Press, Wiley{]}.
 \url{http://www.jstor.org/stable/42956457}.
+
+\bibitem[\citeproctext]{ref-mdpi}
+Kulachai, Waiphot, Unisa Lerdtomornsakul, and Patipol Homyamyen. 2023.
+{``Factors Influencing Voting Decision: A Comprehensive Literature
+Review.''} \emph{Social Sciences}.
+\url{https://doi.org/10.3390/socsci12090469}.
 
 \bibitem[\citeproctext]{ref-Madrick_2020}
 Madrick, Jeff. 2020. {``Why the Working Class Votes Against Its Economic

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.14)  15 FEB 2024 01:59
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.14)  15 FEB 2024 08:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -559,49 +559,49 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 171.
 No file paper.aux.
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-Package scrbase Info: activating english \abstractname on input line 178.
-Package scrbase Info: activating english \partname on input line 178.
-Package scrbase Info: activating english \figurename on input line 178.
-Package scrbase Info: activating english \tablename on input line 178.
-Package scrbase Info: activating english \contentsname on input line 178.
-Package scrbase Info: activating english \listfigurename on input line 178.
-Package scrbase Info: activating english \listtablename on input line 178.
-Package scrbase Info: activating english \refname on input line 178.
-Package scrbase Info: activating english \indexname on input line 178.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+Package scrbase Info: activating english \abstractname on input line 180.
+Package scrbase Info: activating english \partname on input line 180.
+Package scrbase Info: activating english \figurename on input line 180.
+Package scrbase Info: activating english \tablename on input line 180.
+Package scrbase Info: activating english \contentsname on input line 180.
+Package scrbase Info: activating english \listfigurename on input line 180.
+Package scrbase Info: activating english \listtablename on input line 180.
+Package scrbase Info: activating english \refname on input line 180.
+Package scrbase Info: activating english \indexname on input line 180.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 178.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 180.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 178.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 180.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 178.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 180.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 178.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 180.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 178.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 180.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 178.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 180.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 178.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 180.
 
 Package fontspec Info: latinmodern-math scale = 0.9999967668407183.
 
@@ -627,7 +627,7 @@ Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 178.
+(Font)              scaled to size 10.95pt on input line 180.
 
 Package fontspec Info: latinmodern-math scale = 0.9999967668407183.
 
@@ -659,15 +659,15 @@ Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 178.
+(Font)              scaled to size 10.95pt on input line 180.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 178.
+(Font)              `operators' in the math version `normal' on input line 180.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 178.
+(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 180.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 178.
+(Font)              `operators' in the math version `bold' on input line 180.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 178.
+(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 180.
 
 Package fontspec Info: latinmodern-math scale = 0.9999967668407183.
 
@@ -746,13 +746,13 @@ Package fontspec Info: Font family 'latinmodern-math.otf(2)' created for font
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 178.
+(Font)              `symbols' in the math version `normal' on input line 180.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 178.
+(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 180.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 178.
+(Font)              `symbols' in the math version `bold' on input line 180.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 178.
+(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 180.
 
 Package fontspec Info: latinmodern-math scale = 0.9999967668407183.
 
@@ -813,19 +813,19 @@ Package fontspec Info: Font family 'latinmodern-math.otf(3)' created for font
 (fontspec)             =6.56999pt\relax \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 178.
+(Font)              `largesymbols' in the math version `normal' on input line 180.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 178.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 180.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 178.
+(Font)              `largesymbols' in the math version `bold' on input line 180.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 178.
-LaTeX Info: Redefining \microtypecontext on input line 178.
-Package microtype Info: Applying patch `item' on input line 178.
-Package microtype Info: Applying patch `toc' on input line 178.
-Package microtype Info: Applying patch `eqnum' on input line 178.
-Package microtype Info: Applying patch `footnote' on input line 178.
-Package microtype Info: Applying patch `verbatim' on input line 178.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 180.
+LaTeX Info: Redefining \microtypecontext on input line 180.
+Package microtype Info: Applying patch `item' on input line 180.
+Package microtype Info: Applying patch `toc' on input line 180.
+Package microtype Info: Applying patch `eqnum' on input line 180.
+Package microtype Info: Applying patch `footnote' on input line 180.
+Package microtype Info: Applying patch `verbatim' on input line 180.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -838,7 +838,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 178.
+Package hyperref Info: Link coloring ON on input line 180.
 
 Package hyperref Warning: Rerun to get /PageLabels entry.
 
@@ -847,151 +847,153 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 180.
+(Font)              scaled to size 20.74pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 180.
+(Font)              scaled to size 14.4pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 180.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 180.
+(Font)              scaled to size 12.0pt on input line 182.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 182.
 (/Users/gavincrooks/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 20.7419pt on input line 180.
+(Font)              scaled to size 20.7419pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.4013pt on input line 180.
+(Font)              scaled to size 14.4013pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.0011pt on input line 180.
+(Font)              scaled to size 12.0011pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 20.73778pt on input line 180.
+(Font)              scaled to size 20.73778pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.39845pt on input line 180.
+(Font)              scaled to size 14.39845pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 180.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 180.
+(Font)              scaled to size 11.99872pt on input line 182.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 182.
 (/Users/gavincrooks/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/Users/gavincrooks/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 180.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 182.
 (/Users/gavincrooks/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/Users/gavincrooks/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 180.
+(Font)              scaled to size 10.0pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 180.
+(Font)              scaled to size 7.0pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 180.
+(Font)              scaled to size 10.00092pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 180.
+(Font)              scaled to size 7.00064pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 180.
+(Font)              scaled to size 9.99893pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 180.
+(Font)              scaled to size 6.99925pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 180.
+(Font)              scaled to size 9.0pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 180.
+(Font)              scaled to size 6.0pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 180.
+(Font)              scaled to size 5.0pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 9.00082pt on input line 180.
+(Font)              scaled to size 9.00082pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00055pt on input line 180.
+(Font)              scaled to size 6.00055pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 180.
+(Font)              scaled to size 5.00046pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.99904pt on input line 180.
+(Font)              scaled to size 8.99904pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 180.
+(Font)              scaled to size 5.99936pt on input line 182.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 180.
-Package tocbasic Info: character protrusion at toc deactivated on input line 188.
+(Font)              scaled to size 4.99947pt on input line 182.
+Package tocbasic Info: character protrusion at toc deactivated on input line 199.
 No file paper.toc.
 \tf@toc=\write3
 \openout3 = `paper.toc'.
-
-
-LaTeX Warning: Reference `sec-data' on page 1 undefined on input line 211.
-
-
-LaTeX Warning: Reference `sec-results' on page 1 undefined on input line 212.
-
-
-LaTeX Warning: Reference `sec-data' on page 1 undefined on input line 213.
 
 [1
 
 
 ]
 
-LaTeX Warning: Reference `fig-figure1' on page 2 undefined on input line 245.
+LaTeX Warning: Reference `sec-data' on page 2 undefined on input line 223.
 
-File: paper_files/figure-pdf/fig-figure1-1.pdf Graphic file (type pdf)
-<use paper_files/figure-pdf/fig-figure1-1.pdf>
 
-LaTeX Warning: Reference `fig-figure2' on page 2 undefined on input line 268.
+LaTeX Warning: Reference `sec-results' on page 2 undefined on input line 224.
 
-File: paper_files/figure-pdf/fig-figure2-1.pdf Graphic file (type pdf)
-<use paper_files/figure-pdf/fig-figure2-1.pdf>
 
-Package longtable Warning: Column widths have changed
-(longtable)                in table 1 on input line 305.
+LaTeX Warning: Reference `fig-figure1' on page 2 undefined on input line 257.
+
+
+LaTeX Warning: Reference `fig-figure1' on page 2 undefined on input line 258.
 
 [2]
 
-LaTeX Warning: Reference `fig-figure3' on page 3 undefined on input line 314.
+LaTeX Warning: Reference `fig-figure2' on page 3 undefined on input line 272.
 
+
+LaTeX Warning: Reference `tbl-race_dist' on page 3 undefined on input line 288.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 1 on input line 316.
+
+
+LaTeX Warning: Reference `fig-figure3' on page 3 undefined on input line 325.
+
+[3]
 File: paper_files/figure-pdf/fig-figure3-1.pdf Graphic file (type pdf)
 <use paper_files/figure-pdf/fig-figure3-1.pdf>
 
-LaTeX Warning: Reference `fig-figure4' on page 3 undefined on input line 337.
+LaTeX Warning: Reference `fig-figure4' on page 4 undefined on input line 348.
 
 
-LaTeX Warning: Reference `sec-race_data' on page 3 undefined on input line 344.
+LaTeX Warning: Reference `sec-race_data' on page 4 undefined on input line 355.
 
 File: paper_files/figure-pdf/fig-figure4-1.pdf Graphic file (type pdf)
 <use paper_files/figure-pdf/fig-figure4-1.pdf>
-
-LaTeX Warning: Reference `sec-intro' on page 3 undefined on input line 362.
-
-[3] [4] [5]
+[4] [5]
+File: paper_files/figure-pdf/fig-figure1-1.pdf Graphic file (type pdf)
+<use paper_files/figure-pdf/fig-figure1-1.pdf>
+File: paper_files/figure-pdf/fig-figure2-1.pdf Graphic file (type pdf)
+<use paper_files/figure-pdf/fig-figure2-1.pdf>
+[6] [7]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 375.
+(Font)              scaled to size 7.665pt on input line 463.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 375.
+(Font)              scaled to size 5.475pt on input line 463.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95099pt on input line 375.
+(Font)              scaled to size 10.95099pt on input line 463.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.66568pt on input line 375.
+(Font)              scaled to size 7.66568pt on input line 463.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.4755pt on input line 375.
+(Font)              scaled to size 5.4755pt on input line 463.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 375.
+(Font)              scaled to size 10.94882pt on input line 463.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 375.
+(Font)              scaled to size 7.66417pt on input line 463.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 375.
+(Font)              scaled to size 5.47441pt on input line 463.
 
 Package longtable Warning: Table widths have changed. Rerun LaTeX.
 
-[6] (./paper.aux
+[8] (./paper.aux
 ! Missing \endcsname inserted.
 <to be read again> 
                    \protect 
-l.21 ...\_dist}{{1}{2}{Ethnicity Data}{table.1}{}}
+l.21 ...\_dist}{{1}{3}{Ethnicity Data}{table.1}{}}
                                                    
 Here is how much of TeX's memory you used:
- 23461 strings out of 476778
- 456459 string characters out of 5801338
- 1933647 words of memory out of 5000000
- 45155 multiletter control sequences out of 15000+600000
+ 23468 strings out of 476778
+ 456509 string characters out of 5801338
+ 1935647 words of memory out of 5000000
+ 45162 multiletter control sequences out of 15000+600000
  569327 words of font info for 117 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 108i,9n,121p,10900b,544s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,9n,121p,10900b,511s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on paper.pdf (6 pages).
+Output written on paper.pdf (8 pages).
