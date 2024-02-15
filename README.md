@@ -16,4 +16,4 @@ The repo is structured as:
 -   `scripts` contains the R scripts used to simulate, download and clean data.
 
 ## LLM's (Large Language Models)
-In today's world, it is important to note if and how LLM's were used to produce this repo. There was no use of any LLM to produce this repo or any of the files it contains. All work in this repo is produced by myself or appropriately cited.
+In today's world, it is important to note if and how LLM's were used to produce this repo. Aspects of the code were written with the help of ChatGPT 3.5. The entire chat history is available in inputs/llms/usage.txt.

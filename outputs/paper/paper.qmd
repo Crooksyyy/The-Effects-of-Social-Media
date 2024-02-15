@@ -99,6 +99,7 @@ ggplot(cleaned_data, aes(x = "", fill = follow_politics)) +
 ```{r}
 # Parts of this code from R-charts
 #https://r-charts.com/part-whole/stacked-bar-chart-ggplot2/
+# Assisited by Chat GPT3.5 - view full chat in inputs/llms/usage.txt
 ggplot(cleaned_data, aes(x = follow_trump, fill = race)) +
   geom_bar(position = 'stack', color = 'black', stat = 'count') +
   labs(title = "Number of People Following Trump by Race",
@@ -110,9 +111,14 @@ ggplot(cleaned_data, aes(x = follow_trump, fill = race)) +
 
 ```
 ```{r}
+#| label: fig-figure3
+#| fig-cap: ""
+#| warning: false
+#| message: false
+#| echo: false
+
+## Assisited by Chat GPT3.5 - view full chat in inputs/llms/usage.txt
 #Decrease from 12 income groups to 4 
-# help from stack overflow 
-#https://stackoverflow.com/questions/28190435/changing-factor-levels-with-dplyr-mutate
 cleaned_data <- cleaned_data %>%
   mutate(income_group = case_when(
     hhld_inc %in% c("$0 to $9,999", "$10,000 to $19,999") ~ "$0 to $19,999",
