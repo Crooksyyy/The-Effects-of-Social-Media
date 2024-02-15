@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.12)  14 FEB 2024 21:20
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.12)  14 FEB 2024 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -946,39 +946,42 @@ File: paper_files/figure-pdf/fig-figure2-1.pdf Graphic file (type pdf)
 [3]
 File: paper_files/figure-pdf/unnamed-chunk-5-1.pdf Graphic file (type pdf)
 <use paper_files/figure-pdf/unnamed-chunk-5-1.pdf>
-[4] [5] [6]
+[4] [5]
+File: paper_files/figure-pdf/unnamed-chunk-6-1.pdf Graphic file (type pdf)
+<use paper_files/figure-pdf/unnamed-chunk-6-1.pdf>
+[6] [7] [8]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 415.
+(Font)              scaled to size 7.665pt on input line 447.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 415.
+(Font)              scaled to size 5.475pt on input line 447.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95099pt on input line 415.
+(Font)              scaled to size 10.95099pt on input line 447.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.66568pt on input line 415.
+(Font)              scaled to size 7.66568pt on input line 447.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.4755pt on input line 415.
+(Font)              scaled to size 5.4755pt on input line 447.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 415.
+(Font)              scaled to size 10.94882pt on input line 447.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 415.
+(Font)              scaled to size 7.66417pt on input line 447.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 415.
+(Font)              scaled to size 5.47441pt on input line 447.
 
 Package longtable Warning: Table widths have changed. Rerun LaTeX.
 
-[7] (./paper.aux
+[9] (./paper.aux
 ! Missing \endcsname inserted.
 <to be read again> 
                    \protect 
 l.22 ...\_dist}{{1}{3}{Ethnicity Data}{table.1}{}}
                                                    
 Here is how much of TeX's memory you used:
- 23914 strings out of 476858
- 462604 string characters out of 5802901
+ 23923 strings out of 476858
+ 463041 string characters out of 5802901
  1929627 words of memory out of 5000000
- 45519 multiletter control sequences out of 15000+600000
+ 45527 multiletter control sequences out of 15000+600000
  569335 words of font info for 118 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  108i,9n,120p,10900b,511s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on paper.pdf (7 pages).
+Output written on paper.pdf (9 pages).
