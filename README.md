@@ -1,10 +1,12 @@
-# Starter folder
+# How Household Income Impacts Political Views, Focusing on Mr. Donald Trump
 
 ## Overview
 
-This repo provides students with a foundation for their own projects associated with *Telling Stories with Data*. You do not need every aspect for every paper and you should delete aspects that you do not need.
+This repo provides an analysis of the impacts of household income on voting. To complete this analysis we use a self reported measure of how closely an id=ndividual follows Mr. Donald Trump and their self reported household income. To further our analysis we also use variables like race.
 
-To use this folder, click the green "Code" button", then "Download ZIP". Move the downloaded folder to where you want to work on your own computer, and then modify it to suit.
+This paper was inspired by 'The Welfare Effects of Social Media' available at the below link: https://www.aeaweb.org/articles?id=10.1257/aer.20190658&ArticleSearch%5Bwithin%5D%5Barticletitle%5D=1&ArticleSearch%5Bwithin%5D%5Barticleabstract%5D=1&ArticleSearch%5Bwithin%5D%5Bauthorlast%5D=1&ArticleSearch%5Bq%5D=&JelClass%5Bvalue%5D=I3&journal=1&page=2&per-page=21&from=j
+
+
 
 ## File Structure
 

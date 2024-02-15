@@ -15,7 +15,6 @@ cleaned_data <- select(raw_data, hhld_inc, race, follow_politics, follow_trump)
 cleaned_data <- cleaned_data %>% 
   drop_na()
 
-
 View(cleaned_data)
 #### Save data ####
 write_csv(cleaned_data, "outputs/data/analysis_data.csv")
