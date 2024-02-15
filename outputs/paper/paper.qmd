@@ -3,7 +3,7 @@ title: "How Household Income Impacts Political Views, Focusing on Mr. Donald Tru
 author: 
   - Gavin Crooks
   - Samarth Rajani
-thanks: "Code and data are available at: LINK.https://github.com/Crooksyyy/The-Effects-of-Social-Media"
+thanks: "Code is available at: LINK.https://github.com/Crooksyyy/The-Effects-of-Social-Media. Data is available at :LINK.https://www.aeaweb.org/articles?id=10.1257/aer.20190658&ArticleSearch%5Bwithin%5D%5Barticletitle%5D=1&ArticleSearch%5Bwithin%5D%5Barticleabstract%5D=1&ArticleSearch%5Bwithin%5D%5Bauthorlast%5D=1&ArticleSearch%5Bq%5D=&JelClass%5Bvalue%5D=I3&journal=1&page=2&per-page=21&from=j"
 date: today
 date-format: long
 abstract: "This study explores the relationship between household income, ethnicity, and political preferences using data from 'The Welfare Effects of Social Media.' Despite inconclusive findings challenging the presumed impact of income on political views, our innovative metric, measuring respondents' propensity to follow Donald Trump, did not provide conclusive results. This introduces new avenues in political science and statistics, encouraging further exploration into understanding the dynamics of these relationships. The study contributes to the ongoing discourse on the complex relationships between income, ethnicity, and political inclinations." 
@@ -32,29 +32,57 @@ Household income is defined as the gross income earned by all members in a house
 
 In ‘Income Inequality and Partisan Voting in the United States’, Andrew Gelman, Lane Kenworthy and Yu-Sung Su [@lane] make a case for higher earning Americans voting Republican, whereas Jeff Madrick [@Madrick_2020] argues how working-class Americans voted against their interests in voting Republican. Conflicting theories have emerged, and we intend on tackling this issue at hand of whether different income brackets tend to vote differently. By measuring the difference in propensity to follow Mr. Donald Trump in relation to household income.
 
-The remainder of this paper is structured as follows. @sec-data will introduce the data set and the variables it contains. @sec-results will display the findings of our data in relation to our paper.    The @sec-disc will discuss why the findings matter and the weaknesses of our analysis.   
+The remainder of this paper is structured as follows. @sec-data will introduce the data set and the variables it contains. @sec-results will display the findings of our data in relation to our paper. The @sec-disc will discuss why the findings matter and the weaknesses of our analysis.   
 
 
-Our data has been obtained from ‘The Welfare Effects of Social Media’ [@paper] .
+Our data has been obtained from ‘The Welfare Effects of Social Media’ [@paper]. To obtain the raw data please use thine links available in the repo or bibliography. 
 Our code is supported by the following packages [@citeR] [@tidy] [@her] [@knitr]
 
 
 # Data {#sec-data}
 ## Data Introduction {#sec-dataintro}
 
-The data for this paper was collected from the replication package of the paper ‘The Welfare Effects of Social Media’[@paper] The authors from that data had collected this data themselves using an online survey platform called Qulatrics, inquiring about personal information such as personal names, IP addresses, extent of by which the subjects follow politics, etc. Notably the dataset would contain a lot of confidential information, that if released in the replication package would cause ethical problems. As a result, the authors included the de-identified versions of their data collected, which was used in our analysis too.  
+The data for this paper was collected from the replication package of the paper ‘The Welfare Effects of Social Media’[@paper] The authors from that data had collected this data themselves using an online survey platform called Qulatrics, inquiring about personal information such as personal names, IP addresses, extent of by which the subjects follow politics, etc. Notably the dataset would contain a lot of confidential information, that if released in the replication package would cause ethical problems. As a result, the authors included the de-identified versions of their data collected, which was used in our analysis too.This method of data collection obtained a large amount of data, 24 000 responses, but will bring to question the quality of the data. All responses were self reported, imputing a form of bias as the values obtained my not be the true. Specifically terms used such as 'Somewhat closely' is up into interpretation. THis is explored with in each variable and tested using the figures below.  
 
 ## Income Data {#sec-income_data}
 
+```{r}
+#| label: fig-figure1
+#| fig-cap: "Distribution of Income from Responses in the facebook ad"
+#| warning: false
+#| message: false
+#| echo: false
+
+ggplot(cleaned_data, aes(x = reorder(hhld_inc, -table(hhld_inc)[hhld_inc]), fill = hhld_inc)) +
+  geom_bar() +
+  labs(x = "Household Income",
+       y = "Number of Respondents") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  guides(fill = FALSE) # Parts of the code from Stack overflow 
+
+```
+
 Our key variables of interest include household income. The survey participants were offered options in bins starting at 0 to 9,999 US dollar range, with every succeeding bin also being 9,999 USD wide. The bins went up to a ceiling of 50,000 USD per annum, then every next bin was 25,000 USD wide until a ceiling of 150,000 USD. In our analysis we combine the bins above 9,999 into – 20,000 to 49,999, 50,000 to 99,999 and the rest being 100,000 and up. The option of ‘Prefer not to answer’ was also available, and the entries with that response were dropped. The distribution of the data can be seen in @fig-figure1. @fig-figure1 closely resembles the expected distribution of USA household income. As expected in any income distribution the majority of responses fall within the average income ranges of the USA, between 20,000USD and 100,000USD [@USA]. These factors indicate that the data set has an accurate representation of household income.
-
-
 
 ## Politics Data {#sec-pol_data}
 
-Another variable of use is the extent to which the subjects follow Mr. Donald Trump, leader of the Republican Party. The possible responses were ‘Not at all closely', 'Somewhat closely,’ ‘Rather closely’ and ‘Very Closely,’ and the respondents could select one of these options which will become our measure of measuring subscription to Republican ideas. This data is represented using a pie chart in @fig-figure2. This variable faces many problems as this categorical scale is not consistent across respondents. To be specific we mean someone who identifies as someone who does follows Not at all closely can be following Mr. Donald Trump more than someone who identifies as Somewhat closely. This is a measurement issue within to the questions asked in the survey and all self-identifying variables in general. @figure2 shows the quantity of respondents in each group. The most common response is that they follow somewhat closely, and the other responses are relatively even.
+```{r}
+#| label: fig-figure2
+#| fig-cap: "How Closely People Follow Mr.Donald Trump from Responses in the facebook ad"
+#| warning: false
+#| message: false
+#| echo: false
+
+ggplot(cleaned_data, aes(x = "", fill = follow_trump)) +
+  geom_bar() +
+  coord_polar("y") +
+  labs(fill = "Legend") +
+  theme(axis.title = element_blank())
 
 
+```
+
+Another variable of use is the extent to which the subjects follow Mr. Donald Trump, leader of the Republican Party. The possible responses were ‘Not at all closely', 'Somewhat closely,’ ‘Rather closely’ and ‘Very Closely,’ and the respondents could select one of these options which will become our measure of measuring subscription to Republican ideas. This data is represented using a pie chart in @fig-figure2. This variable faces many problems as this categorical scale is not consistent across respondents. To be specific we mean someone who identifies as someone who does follows Not at all closely can be following Mr. Donald Trump more than someone who identifies as Somewhat closely. This is a measurement issue within to the questions asked in the survey and all self-identifying variables in general. @fig-figure2 shows the quantity of respondents in each group. The most common response is that they follow somewhat closely, and the other responses are relatively even.
 
 ## Ethnicity Data {#sec-race_data}
 The second question of the data that we have included in our analysis is the ethnicity of the respondents. This again is a categorical variable, that the individual self identifies their own ethnicity. The response options included Asian or Pacific Islander, White / Caucasian, Hispanic, Black or African American and other. @tbl-race_dist shows the percentage of respondents in each  with the overwhelming majority of responses being Caucasian at nearly 70%. This is actually less than the most recent estimates by the United States government which estimate over 75% of the population is Caucasian [@USA]. The data also has an over representation of Asian and Native Americans. This results in an under representation of Hispanic and African American populations. 
@@ -72,7 +100,6 @@ kable(proportion_table,
       col.names = c("Ethnicity", "Percentage of Responses")
 )
 ```
-
 
 # Results {#sec-results}
 
@@ -135,9 +162,9 @@ ggplot(cleaned_data, aes(x = follow_trump, fill = race)) +
 
 ```
 
-Overall, the results of this analysis were inconclusive to measure how income impacts individuals' propensity to follow republican rhetoric. There are many reasons this could be true and as stated in the @intro there are multiple schools of thought previously studied on the topic. 
+Overall, the results of this analysis were inconclusive to measure how income impacts individuals' propensity to follow republican rhetoric. There are many reasons this could be true and as stated in the @sec-intro there are multiple schools of thought previously studied on the topic. 
 
-# Discussion {sec-disc}
+# Discussion {#sec-disc}
 ## Inconclusive – not a futile exercise 
 Our results show no evident relationship between income and Republic following. This result is important in of itself – the insignificant relationship suggests income does not influence an individual’s choice of presidential candidate. There can be many possible reasons. The first reason is that other factors apart from income influence this choice to a much greater extent. For example, a family of 5 kids may be more influenced by a candidate promising better institutional infrastructure like more schools and subsidized education. As mentioned in ‘Factors Influencing Voting Decision: A Comprehensive Literature Review’ [@mdpi], the main headings influencing decisions include ‘demographic factors, psychological factors, sociocultural factors and economic factors.’ Income is only one of the many economic factors, and so may have a very small influence on voting preference. 
 
@@ -147,40 +174,7 @@ Secondly, any values that were missing from the dataset were dropped for this pa
 Lastly, the survey collected data via an online platform, thereby leaving out opinions of individuals either not in possession of technology or not very adept at operating it such as the elderly. This is another sampling bias result, as it leaves out another key societal group for the analysis. 
 Thirdly, the income variable only being measured as a categorical variable limited our analysis. Income is usually measured as a continous variable which would have allowed analysis such as regression to be used. 
 
-# Appendix {-}
-## Figures 
-
-```{r}
-#| label: fig-figure1
-#| fig-cap: "Distribution of Income from Responses in the facebook ad"
-#| warning: false
-#| message: false
-#| echo: false
-
-ggplot(cleaned_data, aes(x = reorder(hhld_inc, -table(hhld_inc)[hhld_inc]), fill = hhld_inc)) +
-  geom_bar() +
-  labs(x = "Household Income",
-       y = "Number of Respondents") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  guides(fill = FALSE) # Parts of the code from Stack overflow 
-
-```
-
-```{r}
-#| label: fig-figure2
-#| fig-cap: "How Closely People Follow Mr.Donald Trump from Responses in the facebook ad"
-#| warning: false
-#| message: false
-#| echo: false
-
-ggplot(cleaned_data, aes(x = "", fill = follow_trump)) +
-  geom_bar() +
-  coord_polar("y") +
-  labs(fill = "Legend") +
-  theme(axis.title = element_blank())
-
-
-```
+# Appendix {#sec-appendix}
 
 ## Data Cleaning
 The data cleaning for this analysis was very straightforward. Once the data was obtained using the links mentioned in the paper or the github repo, the variables reqired for the analysis we compiled and any response with missing data was removed. 
